@@ -2,7 +2,7 @@
 Ultrasonic sensor based tank water level indicator using arduino nano. Input 9V DC to arduino nano. It is a contactless method to meaure water level. Many other water level indicator methods uses contact with water using wire conductors. But that may process water with electrolysis and may harm the quality of water.  
 
 # Tank dimensions
-![tank_dimensions](tank_dimensions.jpeg)
+<img src="tank_dimensions.jpeg" width="300">
 
 # Schematic: TODO
 
