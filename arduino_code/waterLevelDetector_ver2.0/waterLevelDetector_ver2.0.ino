@@ -75,7 +75,7 @@ if ((distance  > (int((totalHeight*90)/100)))){
   digitalWrite(full, LOW);
 }
 else if((distance  > (int((totalHeight*70)/100))) and (distance  <= (int((totalHeight*90)/100)))){
-  Serial.println("20%");
+  Serial.println("Tank water level is 20%");
   digitalWrite(empty, HIGH);
   digitalWrite(low, HIGH);
     digitalWrite(lowerMiddle, LOW);
@@ -85,7 +85,7 @@ else if((distance  > (int((totalHeight*70)/100))) and (distance  <= (int((totalH
   
 }
 else if((distance  > (int((totalHeight*50)/100))) and (distance  <= (int((totalHeight*70)/100)))){
-  Serial.println("40%");
+  Serial.println("Tank water level is 40%");
   digitalWrite(empty, HIGH);
   digitalWrite(low, HIGH);
   digitalWrite(lowerMiddle, HIGH);
@@ -94,7 +94,7 @@ else if((distance  > (int((totalHeight*50)/100))) and (distance  <= (int((totalH
   digitalWrite(full, LOW);
 }
 else if((distance  > (int((totalHeight*30)/100))) and (distance  <= (int((totalHeight*50)/100)))){
-  Serial.println("60%");
+  Serial.println("Tank water level is 60%");
   digitalWrite(empty, HIGH);
   digitalWrite(low, HIGH);
   digitalWrite(lowerMiddle, HIGH);
@@ -102,8 +102,8 @@ else if((distance  > (int((totalHeight*30)/100))) and (distance  <= (int((totalH
   digitalWrite(upperMiddle, LOW);
   digitalWrite(full, LOW);
 }
-else if((distance  > (int((totalHeight*10)/100))) and (distance  <= (int((totalHeight*30)/100)))){
-  Serial.println("80%");
+else if((distance  > (int((totalHeight*5)/100))) and (distance  <= (int((totalHeight*30)/100)))){
+  Serial.println("Tank water level is 80%");
   digitalWrite(empty, HIGH);
   digitalWrite(low, HIGH);
   digitalWrite(lowerMiddle, HIGH);
@@ -111,8 +111,8 @@ else if((distance  > (int((totalHeight*10)/100))) and (distance  <= (int((totalH
   digitalWrite(upperMiddle, HIGH);
   digitalWrite(full, LOW);
 }
-else if(distance <= (int((totalHeight*10)/100))){
-  Serial.println("100%");
+else if(distance <= (int((totalHeight*5)/100))){
+  Serial.println("Tank is full 100%");
   digitalWrite(empty, HIGH);
   digitalWrite(low, HIGH);
   digitalWrite(lowerMiddle, HIGH);
