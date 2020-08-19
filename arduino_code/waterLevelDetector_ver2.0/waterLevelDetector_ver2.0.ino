@@ -65,15 +65,55 @@ Serial.print("Distance(cm): ");
 Serial.println(distance);
 delay(2000);
 
-if ((distance  > (int((totalHeight*90)/100)))){
-  Serial.println("Tank is empty (0%)");
-  digitalWrite(empty, HIGH);
-  digitalWrite(low, LOW);
-  digitalWrite(lowerMiddle, LOW);
-  digitalWrite(middle, LOW);
-  digitalWrite(upperMiddle, LOW);
-  digitalWrite(full, LOW);
-}
+if ((distance  > (int((totalHeight * 98) / 100)))) {
+    Serial.println("Tank is empty (0%)");
+    digitalWrite(empty, LOW);
+    digitalWrite(low, LOW);
+    digitalWrite(lowerMiddle, LOW);
+    digitalWrite(middle, LOW);
+    digitalWrite(upperMiddle, LOW);
+//    digitalWrite(full, LOW);
+    tone(full, 1000, 500);
+  }
+  else if ((distance  > (int((totalHeight * 95) / 100))) and (distance  <= (int((totalHeight * 98) / 100)))) {
+    Serial.println("Tank is almost empty (5%)");
+    //LED blinking
+    digitalWrite(empty, HIGH);
+    delay(200);
+    digitalWrite(empty, LOW);
+    delay(200);
+    digitalWrite(empty, HIGH);
+    delay(200);
+    digitalWrite(empty, LOW);
+    delay(200);
+    digitalWrite(empty, HIGH);
+    delay(200);
+    digitalWrite(empty, LOW);
+    delay(200);
+    digitalWrite(empty, HIGH);
+    delay(200);
+    digitalWrite(empty, LOW);
+    delay(200);
+    digitalWrite(empty, HIGH);
+    delay(200);
+    digitalWrite(empty, LOW);
+    delay(200);
+
+    digitalWrite(low, LOW);
+    digitalWrite(lowerMiddle, LOW);
+    digitalWrite(middle, LOW);
+    digitalWrite(upperMiddle, LOW);
+    digitalWrite(full, LOW);
+  }
+  else if ((distance  > (int((totalHeight * 90) / 100))) and (distance  <= (int((totalHeight * 95) / 100)))) {
+    Serial.println("Tank water level is (10%)");
+    digitalWrite(empty, HIGH);
+    digitalWrite(low, LOW);
+    digitalWrite(lowerMiddle, LOW);
+    digitalWrite(middle, LOW);
+    digitalWrite(upperMiddle, LOW);
+    digitalWrite(full, LOW);
+  }
 else if((distance  > (int((totalHeight*70)/100))) and (distance  <= (int((totalHeight*90)/100)))){
   Serial.println("Tank water level is 20%");
   digitalWrite(empty, HIGH);
